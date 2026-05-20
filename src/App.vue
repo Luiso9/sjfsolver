@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 20px; font-family: sans-serif">
-    <h1>SJF Preemptive Visualization</h1>
+    <h1>Shortest Job First</h1>
     <InputForm />
     <GanttChart />
   </div>

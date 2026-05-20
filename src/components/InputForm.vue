@@ -11,8 +11,7 @@
       <button type="button" class="secondary" @click="store.reset()">Reset</button>
     </div>
 
-    <div v-if="store.errorMessage">
-      0" class="errors">
+    <div v-if="store.errorMessage" class="errors">
       <div v-for="error in store.errorMessage" :key="error">
         {{ error }}
       </div>
@@ -28,8 +27,6 @@ const store = useSchedulerStore()
 
 <style scoped>
 .card {
-  background: #242424;
-  border: 1px solid #3a3a3a;
   border-radius: 10px;
   padding: 16px;
 }
