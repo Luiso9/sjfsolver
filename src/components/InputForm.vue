@@ -27,7 +27,6 @@ const store = useSchedulerStore()
 
 <style scoped>
 .card {
-  border-radius: 10px;
   padding: 16px;
 }
 
@@ -49,7 +48,6 @@ textarea {
   background: #111;
   color: #f5f5f5;
   border: 1px solid #444;
-  border-radius: 8px;
   padding: 12px;
   font-family: Consolas, Monaco, monospace;
   font-size: 14px;
@@ -65,7 +63,6 @@ textarea {
 
 button {
   border: 0;
-  border-radius: 8px;
   padding: 10px 16px;
   background: #ffe699;
   color: #111;
@@ -81,7 +78,6 @@ button.secondary {
 .errors {
   margin-top: 12px;
   padding: 10px;
-  border-radius: 8px;
   background: #4a1f1f;
   color: #ffd2d2;
   font-size: 14px;

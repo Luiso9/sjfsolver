@@ -118,7 +118,6 @@ const getColor = (pid: string) => colors[pid] || '#e0e0e0'
   overflow-x: auto;
   background: #333;
   padding: 20px;
-  border-radius: 8px;
   font-family: sans-serif;
   margin-top: 20px;
 }
@@ -160,7 +159,6 @@ const getColor = (pid: string) => colors[pid] || '#e0e0e0'
   margin-right: 10px;
   height: 40px;
   margin-top: 30px;
-  border-radius: 4px;
 }
 .cpu-label,
 .rq-label,

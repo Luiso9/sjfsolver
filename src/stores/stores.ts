@@ -116,7 +116,7 @@ const parseInput = (inputData: string): Process[] => {
     .filter(Boolean)
 
   return lines.map((line, index) => {
-    const parts = line.split(/\s+/)
+    const parts = line.replace(/-/g, ' ').split(/\s+/).filter(Boolean)
 
     if (parts.length < 3) {
       throw new Error(`Line ${index + 1}: invalid format`)
@@ -133,17 +133,14 @@ const parseInput = (inputData: string): Process[] => {
     const arrivalTime = Number(rawArrivalTime)
 
     if (!/^P\d+$/i.test(pid)) {
-      throw new Error(`Line ${index + 1}: invalid process id "${parts[0]}"`)
+      throw new Error(`Line ${index + 1}: invalid process id "${rawPid}"`)
     }
 
     if (!Number.isInteger(arrivalTime) || arrivalTime < 0) {
-      throw new Error(`Line ${index + 1}: invalid arrival time "${parts[1]}"`)
+      throw new Error(`Line ${index + 1}: invalid arrival time "${rawArrivalTime}"`)
     }
 
-    const phaseText = parts.slice(2).join('')
-    const phaseTokens = phaseText.includes('-')
-      ? phaseText.split('-')
-      : (phaseText.match(/[PIO0]\d+/gi) ?? [])
+    const phaseTokens = parts.slice(2)
 
     const phases = phaseTokens
       .map(parsePhaseToken)
